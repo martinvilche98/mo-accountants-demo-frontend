@@ -1,3 +1,30 @@
+:root{
+    --clr-bgbase: #f9f8ff;
+    --clr-fgbase: #333;
+    --clr-primary: #97d700;
+    --clr-accent: #00bfff;
+    --clr-red: #ff4e45;
+}
+
+[theme='dark']{
+    --clr-bgbase: #191927;
+    --clr-fgbase: #eee;
+    --clr-primary: #97d700;
+    --clr-accent: #00bfff;
+    --clr-red: #ff4e45;
+}
+
+.bg-base, .bg-base:hover{background: var(--clr-bgbase); background-color: var(--clr-bgbase);}
+.bg-primary, .bg-primary:hover{background: var(--clr-primary); background-color: var(--clr-primary);}
+.bg-accent, .bg-accent:hover{background: var(--clr-accent); background-color: var(--clr-accent);}
+.bg-red, .bg-red:hover{background: var(--clr-red); background-color: var(--clr-red);}
+
+
+.txt-base{color: var(--clr-fgbase);}
+.txt-primary{color: var(--clr-primary);}
+.txt-accent{color: var(--clr-accent);}
+.txt-red{color: var(--clr-red);}
+
 @keyframes fadeInAnimation {
     0% {opacity:0;}
     100% {opacity:1;}
@@ -5,4 +32,10 @@
 @keyframes fadeOutAnimation {
     0% {opacity:0;}
     100% {opacity:1;}
+}
+
+/* OVERRIDES */
+.css-bhp9pd-MuiPaper-root-MuiCard-root{
+    background: var(--clr-bgbase);
+    background-color: var(--clr-bgbase);
 }
