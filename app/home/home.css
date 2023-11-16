@@ -1,0 +1,18 @@
+#MO-logo-header{
+    width: 3rem;
+}
+
+#home-submit-receipt-form-container{
+    width: 30vw;
+    max-width: 500px;
+    min-width: 300px;
+}
+
+.pending-receipt-item{
+    width: 30vw;
+}
+
+.pending-receipt-item-text{
+    padding: 0px;
+    margin: 0px;
+}

@@ -1,10 +1,10 @@
 'use client';
-import { useState, useEffect } from 'react'
+import { useState, useEffect, MutableRefObject } from 'react'
 
 import {TextField, InputAdornment, IconButton} from "@mui/material"
 import {Visibility, VisibilityOff, Key} from "@mui/icons-material"
 
-function PasswordField(props:{id: string,}) {
+function PasswordField(props:{id: string, onKeyUp: Function, disabled: boolean}) {
 
     const [showPassword, setShowPassword] = useState(false);
     const handleClickPasswordIcon = () => setShowPassword((show) => !show);
@@ -15,6 +15,8 @@ function PasswordField(props:{id: string,}) {
         variant="outlined" 
         sx={{ mt:2 }}
         type={showPassword ? 'text' : 'password'}
+        onKeyUp={(v) => props.onKeyUp(v)}
+        disabled={props.disabled || false}
         InputProps={{
         startAdornment: (
             <InputAdornment position="start">
